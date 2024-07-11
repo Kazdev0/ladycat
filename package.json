@@ -5,9 +5,17 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "@amedellin85/xvideos-api": "^1.0.0",
+    "@discordjs/voice": "^0.17.0",
     "chalk": "^4.1.1",
     "discord.js": "^14.9.0",
+    "ffmpeg-static": "^5.2.0",
+    "fix-esm": "^1.0.1",
     "js-yaml": "^4.1.0",
-    "mongoose": "^8.4.1"
+    "mongoose": "^8.4.1",
+    "node-gyp": "^10.2.0",
+    "opusscript": "^0.0.8",
+    "porn-x": "^1.0.54",
+    "tweetnacl": "^1.0.3"
   }
 }

@@ -10,7 +10,7 @@ module.exports = async function LoadCommand(client) {
 
     const rest = new REST({ version: '10' }).setToken(client.config.token);
 
-    console.log(chalk.yellow(`[${client.config.prefix}] `) + chalk.cyan('[CMD] ') + chalk.green('Updating Commands...'));
+    console.log(chalk.yellow(`[${client.config.chalk}] `) + chalk.cyan('[CMD] ') + chalk.green('Updating Commands...'));
     const data = [];
 
     // Slash Commands
@@ -53,7 +53,7 @@ module.exports = async function LoadCommand(client) {
 
     if (data.length > 0) {
         try {
-            console.log(chalk.yellow(`[${client.config.prefix}] `) + chalk.cyan('[CMD] ') + chalk.green('Commands updated!'));
+            console.log(chalk.yellow(`[${client.config.chalk}] `) + chalk.cyan('[CMD] ') + chalk.green('Commands updated!'));
             if (client.config.clientId && !client.config.guildId) {
                 await rest.put(
                     Routes.applicationCommands(client.config.clientId),
@@ -70,10 +70,10 @@ module.exports = async function LoadCommand(client) {
                 );
             }
         } catch (error) {
-            console.log(chalk.yellow(`[${client.config.prefix}] `) + chalk.cyan('[CMD] ') + chalk.red('Cannot Update Commands!'));
+            console.log(chalk.yellow(`[${client.config.chalk}] `) + chalk.cyan('[CMD] ') + chalk.red('Cannot Update Commands!'));
             console.error('Error:', error);
         }
     } else {
-        console.log(chalk.yellow(`[${client.config.prefix}] `) + chalk.cyan('[CMD] ') + chalk.red('There is no Commands!'));
+        console.log(chalk.yellow(`[${client.config.chalk}] `) + chalk.cyan('[CMD] ') + chalk.red('There is no Commands!'));
     }
 };

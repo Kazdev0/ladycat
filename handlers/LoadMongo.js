@@ -5,7 +5,7 @@ async function LoadMongo(client) {
     try {
         await mongoose.connect('mongodb://localhost:27017/', {
         });
-        console.log(chalk.yellow(`[${client.config.prefix}] `) + chalk.cyan('[DB] ') + chalk.green('MongoDB connection true.'))
+        console.log(chalk.yellow(`[${client.config.chalk}] `) + chalk.cyan('[DB] ') + chalk.green('MongoDB connection true.'))
     } catch (error) {
         console.error('MongoDB bağlantı hatası:', error);
     }

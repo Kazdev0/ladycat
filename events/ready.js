@@ -1,7 +1,5 @@
 const { ActivityType } = require('discord.js');
 const chalk = require('chalk');
-const axios = require('axios');
-const cron = require('node-cron');
 
 module.exports = {
     name: 'ready',
